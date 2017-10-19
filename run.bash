@@ -242,7 +242,7 @@ function install_basic_deps {
         sudo perl -i -pe 's/^# *(.+)(trusty|trusty-updates|trusty-security) multiverse$/$1$2 multiverse/gi' /etc/apt/sources.list
     fi
     sudo apt-get update
-    sudo apt-get install linux-image-extra-$(uname -r) -qqy
+    sudo apt-get install linux-image-extra-4.4.0-1022-gke -qqy
     sudo apt-get install jq screen curl mercurial git bzr \
                          software-properties-common apt-transport-https -y
     if [[ $ext_repository ]]; then
